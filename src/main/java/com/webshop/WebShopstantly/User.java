@@ -48,7 +48,7 @@ public class User {
         return loyaltyPoints;
     }
 
-    public void deductLoyaltyPoints() {
-       this.loyaltyPoints--;
+    public void setLoyaltyPoints(int loyaltyPoints) {
+       this.loyaltyPoints = loyaltyPoints;
     }
 }

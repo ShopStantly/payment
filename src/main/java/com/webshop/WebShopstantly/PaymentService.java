@@ -16,8 +16,8 @@ public class PaymentService {
         User user = balance.isEmpty() ? new User() : balance.get(0);
 
         //deducts loyaltyPoints by 1
-        user.deductLoyaltyPoints();
-
+        user.setLoyaltyPoints((user.getLoyaltyPoints()-1));
+        paymentRepository.save(user);
         return user.getBalance();
     }
 
