@@ -17,6 +17,7 @@ public class User {
     private String id;
     private String name;
     private int balance;
+    private int loyaltyPoints;
 
     public String getId() {
         return id;
@@ -40,5 +41,14 @@ public class User {
 
     public void setBalance(int balance) {
         this.balance = balance;
+    }
+
+
+    public int getLoyaltyPoints() {
+        return loyaltyPoints;
+    }
+
+    public void deductLoyaltyPoints() {
+       this.loyaltyPoints--;
     }
 }

@@ -14,6 +14,10 @@ public class PaymentService {
     public Integer getBalance() {
         List<User> balance = paymentRepository.findAll();
         User user = balance.isEmpty() ? new User() : balance.get(0);
+
+        //deducts loyaltyPoints by 1
+        user.deductLoyaltyPoints();
+
         return user.getBalance();
     }
 
